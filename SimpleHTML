@@ -34,14 +34,6 @@
         <p>This page is designed for repeatable testing. You can interact with the elements below to test various functionalities.</p>
         
         <button class="button" onclick="alert('Button clicked!')">Click Me</button>
-        
-        <form>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br><br>
-            <input type="submit" value="Submit">
-        </form>
     </div>
 </body>
 </html>
