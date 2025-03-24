@@ -14,7 +14,6 @@
 <body>
     <h1>Startup Time Test</h1>
     <p id="start-time"></p>
-    <p id="end-time"></p>
     <script>
         // Function to format time with milliseconds
         function formatTimeWithMilliseconds(time) {
