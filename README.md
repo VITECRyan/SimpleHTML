@@ -2,16 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple HTML Page</title>
+    <title>Startup Time Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Simple HTML Page</h1>
-    <p>This is a paragraph of text on my simple HTML page.</p>
-    <ul>
-        <li>First item</li>
-        <li>Second item</li>
-        <li>Third item - Test</li>
-    </ul>
+    <h1>Startup Time Test</h1>
+    <p id="timestamp"></p>
+    <script>
+        document.getElementById('timestamp').innerText = 'Page loaded at: ' + new Date().toLocaleTimeString();
+        console.log('Performance Timing:', window.performance.timing);
+    </script>
 </body>
 </html>
