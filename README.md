@@ -13,10 +13,25 @@
 </head>
 <body>
     <h1>Startup Time Test</h1>
-    <p id="timestamp"></p>
+    <p id="start-time"></p>
+    <p id="end-time"></p>
     <script>
-        document.getElementById('timestamp').innerText = 'Page loaded at: ' + new Date().toLocaleTimeString();
-        console.log('Performance Timing:', window.performance.timing);
+        // Function to format time with milliseconds
+        function formatTimeWithMilliseconds(time) {
+            const date = new Date(time);
+            return date.toLocaleTimeString() + '.' + date.getMilliseconds();
+        }
+
+        // Capture the time when the page starts loading
+        const startTime = performance.timing.navigationStart;
+        document.getElementById('start-time').innerText = 'Page start time: ' + formatTimeWithMilliseconds(startTime);
+
+        // Capture the time when the page fully loads
+        window.onload = function() {
+            const endTime = performance.timing.loadEventEnd;
+            document.getElementById('end-time').innerText = 'Page load time: ' + formatTimeWithMilliseconds(endTime);
+            console.log('Performance Timing:', window.performance.timing);
+        };
     </script>
 </body>
 </html>
